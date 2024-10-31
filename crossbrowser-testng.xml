@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Parallel Test Suite" parallel="methods" thread-count="2">
+    <parameter name="env" value="uat" />
+     <test name="TestChrome">
+        <parameter name="browser" value="chrome" />
+          <classes>
+            <class name="runner.TestRunner"></class>
+         </classes>
+     </test> <!-- Test -->
+     <test name="TestFirefox">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="runner.TestRunner"></class>
+        </classes>
+     </test> <!-- Test -->
+<!--    <test thread-count="3" name="Testedge">-->
+<!--        <parameter name="browser" value="edge" />-->
+<!--        <classes>-->
+<!--            <class name="runner.TestRunner"></class>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+</suite> <!-- Suite -->
